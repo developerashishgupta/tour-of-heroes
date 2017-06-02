@@ -16,11 +16,13 @@ export class HeroService{
 getHeroes():Promise<Array<Hero>>{
     return Promise.resolve(Heroes);
 }
+// getHeroesSlowly():Promise<Hero[]>{
+//     return new Promise(resolve=>{
+//         setTimeout(()=>resolve(this.getHeroes()),15000);
+//     })
+// }
 
-
-getHeroesSlowly():Promise<Hero[]>{
-    return new Promise(resolve=>{
-        setTimeout(()=>resolve(this.getHeroes()),15000);
-    })
+getHero(id:number):Promise<Hero>{
+    return this.getHeroes().then(heroes=>heroes.find(hero=>hero.id=== id));
 }
 }   
