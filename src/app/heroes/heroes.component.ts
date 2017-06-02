@@ -20,6 +20,7 @@ export class HeroesComponent implements OnInit {
   }
 
   selectedHero: Hero;
+  //this data is binded to the view. 
   heroes: Hero[];
 
   getHeroes(): void {

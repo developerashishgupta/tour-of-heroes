@@ -27,4 +27,8 @@ this.route.params
    goBack():void{
        this.location.back();
    }
+
+   save():void{
+       this.heroService.update(this.hero).then(()=>this.goBack());
+   }
 }

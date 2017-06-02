@@ -9,6 +9,8 @@ import {Hero} from '../hero';
 export class DashboardComponent implements OnInit{
  constructor(private heroService:HeroService){}
 
+
+//data binded to the view
 topHeroes:Array<Hero>;
 
 ngOnInit(){
